@@ -147,8 +147,9 @@ public class RatingView: UIView {
         if rating - Float(i) + 1 >= 0.5 {
             let star = stars[i-1]
             star.image = halfImage
+            i++
         }
-        i++
+        
         
         for ; i <= starCount; i++ {
             let star = stars[i-1]
@@ -172,6 +173,7 @@ extension RatingView {
     
     override public func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
         guard editable else { return }
+        handleTouches(touches)
         guard let delegate = delegate else { return }
         delegate.ratingView(self, didChangeRating: rating)
     }
