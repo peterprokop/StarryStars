@@ -6,9 +6,11 @@ StarryStars is iOS GUI library for displaying and editing ratings
 StarryStars' ```RatingView``` is both ```IBDesignable``` and ```IBInspectable```
 
 You can change any of the following properties right in the interface builder:
-![Properties](https://i.imgflip.com/df525.gif)
+
+![Properties](http://i.imgur.com/puU9Ypc.png)
 
 And the the result right away:
+
 ![RatingView](http://i.imgur.com/r3bMqDT.png)
 
 To add RatingView to your Storyboard/.xib file just drag a generic UIView from palette, then in "Custom Class" section of identity inspector set class to ```RatingView```
