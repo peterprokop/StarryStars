@@ -54,11 +54,8 @@ public class RatingView: UIView {
     }
     
     func customInit() {
-        var bundle = NSBundle(identifier: "StarryStars")
-        if bundle == nil {
-            bundle = NSBundle(forClass: RatingView.self)
-        }
-        
+        let bundle = NSBundle(forClass: RatingView.self)
+
         if offImage == nil {
             offImage = UIImage(named: "starryStars_off", inBundle: bundle, compatibleWithTraitCollection: self.traitCollection)
         }
