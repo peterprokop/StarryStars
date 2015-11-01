@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="StarryStarsExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="i3z-0H-7V2" customClass="RatingView" customModule="StarryStarsExample" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="320" height="100"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="Jlc-pL-qOG"/>
+                                    <constraint firstAttribute="height" constant="100" id="z8j-Ra-riY"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="starBigOff"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="starBig"/>
+                                    <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="starBigHalf"/>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="starCount">
+                                        <integer key="value" value="7"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="rating">
+                                        <real key="value" value="2.5"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="halfStarsAllowed" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="editable" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="Jlc-pL-qOG"/>
+                                    </mask>
+                                </variation>
+                            </view>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="i3z-0H-7V2" secondAttribute="trailing" id="GO5-h7-G7g"/>
+                            <constraint firstItem="i3z-0H-7V2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="P0m-9q-XDs"/>
+                            <constraint firstAttribute="trailing" secondItem="i3z-0H-7V2" secondAttribute="trailing" id="Q9d-i8-V4J"/>
+                            <constraint firstItem="i3z-0H-7V2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="dVf-3Z-kyC"/>
+                            <constraint firstItem="i3z-0H-7V2" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="k9H-vm-Xbc"/>
+                            <constraint firstItem="i3z-0H-7V2" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="lzy-JO-AN1"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Q9d-i8-V4J"/>
+                                <exclude reference="k9H-vm-Xbc"/>
+                                <exclude reference="lzy-JO-AN1"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="296" y="391"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="starBig" width="35" height="35"/>
+        <image name="starBigHalf" width="35" height="35"/>
+        <image name="starBigOff" width="35" height="35"/>
+    </resources>
+</document>

@@ -7,21 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0DEBD39F1BDA134D00FC7856 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEBD39E1BDA134D00FC7856 /* AppDelegate.swift */; };
-		0DEBD3A11BDA134D00FC7856 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DEBD3A01BDA134D00FC7856 /* ViewController.swift */; };
-		0DEBD3A41BDA134D00FC7856 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DEBD3A21BDA134D00FC7856 /* Main.storyboard */; };
-		0DEBD3A61BDA134D00FC7856 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DEBD3A51BDA134D00FC7856 /* Assets.xcassets */; };
-		0DEBD3A91BDA134D00FC7856 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DEBD3A71BDA134D00FC7856 /* LaunchScreen.storyboard */; };
+		0D2DE7131BE5F23E005DBFEC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DE7091BE5F23E005DBFEC /* AppDelegate.swift */; };
+		0D2DE7151BE5F23E005DBFEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2DE70B1BE5F23E005DBFEC /* LaunchScreen.storyboard */; };
+		0D2DE7161BE5F23E005DBFEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2DE70D1BE5F23E005DBFEC /* Main.storyboard */; };
+		0D2DE7181BE5F23E005DBFEC /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DE7111BE5F23E005DBFEC /* RatingView.swift */; };
+		0D2DE7191BE5F23E005DBFEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DE7121BE5F23E005DBFEC /* ViewController.swift */; };
+		0D2DE71B1BE5F3B9005DBFEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D2DE71A1BE5F3B9005DBFEC /* Assets.xcassets */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		0DEBD39B1BDA134D00FC7856 /* RateyRateExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RateyRateExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		0DEBD39E1BDA134D00FC7856 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0DEBD3A01BDA134D00FC7856 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0DEBD3A31BDA134D00FC7856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		0DEBD3A51BDA134D00FC7856 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		0DEBD3A81BDA134D00FC7856 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		0DEBD3AA1BDA134D00FC7856 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D2DE7091BE5F23E005DBFEC /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0D2DE70C1BE5F23E005DBFEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		0D2DE70E1BE5F23E005DBFEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0D2DE70F1BE5F23E005DBFEC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0D2DE7111BE5F23E005DBFEC /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		0D2DE7121BE5F23E005DBFEC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0D2DE71A1BE5F3B9005DBFEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0DEBD39B1BDA134D00FC7856 /* StarryStarsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarryStarsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,10 +37,33 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0D2DE7081BE5F23E005DBFEC /* StarryStarsExample */ = {
+			isa = PBXGroup;
+			children = (
+				0D2DE7091BE5F23E005DBFEC /* AppDelegate.swift */,
+				0D2DE70B1BE5F23E005DBFEC /* LaunchScreen.storyboard */,
+				0D2DE70D1BE5F23E005DBFEC /* Main.storyboard */,
+				0D2DE70F1BE5F23E005DBFEC /* Info.plist */,
+				0D2DE7121BE5F23E005DBFEC /* ViewController.swift */,
+			);
+			path = StarryStarsExample;
+			sourceTree = "<group>";
+		};
+		0D2DE7101BE5F23E005DBFEC /* StarryStars */ = {
+			isa = PBXGroup;
+			children = (
+				0D2DE71A1BE5F3B9005DBFEC /* Assets.xcassets */,
+				0D2DE7111BE5F23E005DBFEC /* RatingView.swift */,
+			);
+			name = StarryStars;
+			path = StarryStarsExample/StarryStars;
+			sourceTree = "<group>";
+		};
 		0DEBD3921BDA134D00FC7856 = {
 			isa = PBXGroup;
 			children = (
-				0DEBD39D1BDA134D00FC7856 /* RateyRateExample */,
+				0D2DE7101BE5F23E005DBFEC /* StarryStars */,
+				0D2DE7081BE5F23E005DBFEC /* StarryStarsExample */,
 				0DEBD39C1BDA134D00FC7856 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -46,30 +71,17 @@
 		0DEBD39C1BDA134D00FC7856 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				0DEBD39B1BDA134D00FC7856 /* RateyRateExample.app */,
+				0DEBD39B1BDA134D00FC7856 /* StarryStarsExample.app */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		0DEBD39D1BDA134D00FC7856 /* RateyRateExample */ = {
-			isa = PBXGroup;
-			children = (
-				0DEBD39E1BDA134D00FC7856 /* AppDelegate.swift */,
-				0DEBD3A01BDA134D00FC7856 /* ViewController.swift */,
-				0DEBD3A21BDA134D00FC7856 /* Main.storyboard */,
-				0DEBD3A51BDA134D00FC7856 /* Assets.xcassets */,
-				0DEBD3A71BDA134D00FC7856 /* LaunchScreen.storyboard */,
-				0DEBD3AA1BDA134D00FC7856 /* Info.plist */,
-			);
-			path = RateyRateExample;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		0DEBD39A1BDA134D00FC7856 /* RateyRateExample */ = {
+		0DEBD39A1BDA134D00FC7856 /* StarryStarsExample */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 0DEBD3AD1BDA134D00FC7856 /* Build configuration list for PBXNativeTarget "RateyRateExample" */;
+			buildConfigurationList = 0DEBD3AD1BDA134D00FC7856 /* Build configuration list for PBXNativeTarget "StarryStarsExample" */;
 			buildPhases = (
 				0DEBD3971BDA134D00FC7856 /* Sources */,
 				0DEBD3981BDA134D00FC7856 /* Frameworks */,
@@ -79,9 +91,9 @@
 			);
 			dependencies = (
 			);
-			name = RateyRateExample;
+			name = StarryStarsExample;
 			productName = RateyRateExample;
-			productReference = 0DEBD39B1BDA134D00FC7856 /* RateyRateExample.app */;
+			productReference = 0DEBD39B1BDA134D00FC7856 /* StarryStarsExample.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -98,7 +110,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 0DEBD3961BDA134D00FC7856 /* Build configuration list for PBXProject "RateyRateExample" */;
+			buildConfigurationList = 0DEBD3961BDA134D00FC7856 /* Build configuration list for PBXProject "StarryStarsExample" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -111,7 +123,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				0DEBD39A1BDA134D00FC7856 /* RateyRateExample */,
+				0DEBD39A1BDA134D00FC7856 /* StarryStarsExample */,
 			);
 		};
 /* End PBXProject section */
@@ -121,9 +133,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DEBD3A91BDA134D00FC7856 /* LaunchScreen.storyboard in Resources */,
-				0DEBD3A61BDA134D00FC7856 /* Assets.xcassets in Resources */,
-				0DEBD3A41BDA134D00FC7856 /* Main.storyboard in Resources */,
+				0D2DE7161BE5F23E005DBFEC /* Main.storyboard in Resources */,
+				0D2DE71B1BE5F3B9005DBFEC /* Assets.xcassets in Resources */,
+				0D2DE7151BE5F23E005DBFEC /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -134,28 +146,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0DEBD3A11BDA134D00FC7856 /* ViewController.swift in Sources */,
-				0DEBD39F1BDA134D00FC7856 /* AppDelegate.swift in Sources */,
+				0D2DE7191BE5F23E005DBFEC /* ViewController.swift in Sources */,
+				0D2DE7131BE5F23E005DBFEC /* AppDelegate.swift in Sources */,
+				0D2DE7181BE5F23E005DBFEC /* RatingView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		0DEBD3A21BDA134D00FC7856 /* Main.storyboard */ = {
+		0D2DE70B1BE5F23E005DBFEC /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
-				0DEBD3A31BDA134D00FC7856 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
-		0DEBD3A71BDA134D00FC7856 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				0DEBD3A81BDA134D00FC7856 /* Base */,
+				0D2DE70C1BE5F23E005DBFEC /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0D2DE70D1BE5F23E005DBFEC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0D2DE70E1BE5F23E005DBFEC /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -246,10 +259,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = RateyRateExample/Info.plist;
+				INFOPLIST_FILE = StarryStarsExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Prokop.RateyRateExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = Prokop.StarryStarsExample;
+				PRODUCT_NAME = StarryStarsExample;
 			};
 			name = Debug;
 		};
@@ -257,17 +270,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				INFOPLIST_FILE = RateyRateExample/Info.plist;
+				INFOPLIST_FILE = StarryStarsExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Prokop.RateyRateExample;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = Prokop.StarryStarsExample;
+				PRODUCT_NAME = StarryStarsExample;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		0DEBD3961BDA134D00FC7856 /* Build configuration list for PBXProject "RateyRateExample" */ = {
+		0DEBD3961BDA134D00FC7856 /* Build configuration list for PBXProject "StarryStarsExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0DEBD3AB1BDA134D00FC7856 /* Debug */,
@@ -276,13 +289,14 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		0DEBD3AD1BDA134D00FC7856 /* Build configuration list for PBXNativeTarget "RateyRateExample" */ = {
+		0DEBD3AD1BDA134D00FC7856 /* Build configuration list for PBXNativeTarget "StarryStarsExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				0DEBD3AE1BDA134D00FC7856 /* Debug */,
 				0DEBD3AF1BDA134D00FC7856 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

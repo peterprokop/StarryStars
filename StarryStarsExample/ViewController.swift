@@ -1,6 +1,5 @@
 //
 //  ViewController.swift
-//  RateyRateExample
 //
 //  Created by Peter Prokop on 23/10/15.
 //  Copyright © 2015 Peter Prokop. All rights reserved.
