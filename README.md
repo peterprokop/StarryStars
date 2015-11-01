@@ -40,3 +40,7 @@ use_frameworks!
 - iOS 7.0+ (8.0+ if you use Cocoapods)
 - Xcode 7.0
 - Swift 2.0
+
+## Other Projects
+
+[SwiftOverlays](https://github.com/peterprokop/SwiftOverlays) - Swift GUI library for displaying various popups and notifications.
