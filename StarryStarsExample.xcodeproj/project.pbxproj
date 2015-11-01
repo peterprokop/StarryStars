@@ -11,8 +11,10 @@
 		0D2DE7151BE5F23E005DBFEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2DE70B1BE5F23E005DBFEC /* LaunchScreen.storyboard */; };
 		0D2DE7161BE5F23E005DBFEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2DE70D1BE5F23E005DBFEC /* Main.storyboard */; };
 		0D2DE7191BE5F23E005DBFEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DE7121BE5F23E005DBFEC /* ViewController.swift */; };
-		0D2DE71F1BE5F83C005DBFEC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0D2DE71D1BE5F83C005DBFEC /* Assets.xcassets */; };
 		0D2DE7201BE5F83C005DBFEC /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DE71E1BE5F83C005DBFEC /* RatingView.swift */; };
+		0D98B9B81BE60BDB00D89929 /* starryStars_half@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D98B9B51BE60BDB00D89929 /* starryStars_half@2x.png */; };
+		0D98B9B91BE60BDB00D89929 /* starryStars_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D98B9B61BE60BDB00D89929 /* starryStars_off@2x.png */; };
+		0D98B9BA1BE60BDB00D89929 /* starryStars_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D98B9B71BE60BDB00D89929 /* starryStars_on@2x.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,8 +23,10 @@
 		0D2DE70E1BE5F23E005DBFEC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0D2DE70F1BE5F23E005DBFEC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D2DE7121BE5F23E005DBFEC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		0D2DE71D1BE5F83C005DBFEC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0D2DE71E1BE5F83C005DBFEC /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		0D98B9B51BE60BDB00D89929 /* starryStars_half@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "starryStars_half@2x.png"; sourceTree = "<group>"; };
+		0D98B9B61BE60BDB00D89929 /* starryStars_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "starryStars_off@2x.png"; sourceTree = "<group>"; };
+		0D98B9B71BE60BDB00D89929 /* starryStars_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "starryStars_on@2x.png"; sourceTree = "<group>"; };
 		0DEBD39B1BDA134D00FC7856 /* StarryStarsExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = StarryStarsExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -52,10 +56,20 @@
 		0D2DE71C1BE5F83C005DBFEC /* StarryStars */ = {
 			isa = PBXGroup;
 			children = (
-				0D2DE71D1BE5F83C005DBFEC /* Assets.xcassets */,
+				0D98B9B41BE60BDB00D89929 /* Resource */,
 				0D2DE71E1BE5F83C005DBFEC /* RatingView.swift */,
 			);
 			path = StarryStars;
+			sourceTree = "<group>";
+		};
+		0D98B9B41BE60BDB00D89929 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				0D98B9B51BE60BDB00D89929 /* starryStars_half@2x.png */,
+				0D98B9B61BE60BDB00D89929 /* starryStars_off@2x.png */,
+				0D98B9B71BE60BDB00D89929 /* starryStars_on@2x.png */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		0DEBD3921BDA134D00FC7856 = {
@@ -132,9 +146,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D98B9B81BE60BDB00D89929 /* starryStars_half@2x.png in Resources */,
 				0D2DE7161BE5F23E005DBFEC /* Main.storyboard in Resources */,
-				0D2DE71F1BE5F83C005DBFEC /* Assets.xcassets in Resources */,
+				0D98B9BA1BE60BDB00D89929 /* starryStars_on@2x.png in Resources */,
 				0D2DE7151BE5F23E005DBFEC /* LaunchScreen.storyboard in Resources */,
+				0D98B9B91BE60BDB00D89929 /* starryStars_off@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

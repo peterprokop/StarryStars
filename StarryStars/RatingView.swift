@@ -54,16 +54,19 @@ public class RatingView: UIView {
     }
     
     func customInit() {
-        let bundle = NSBundle(forClass: RatingView.self)
+        var bundle = NSBundle(identifier: "StarryStars")
+        if bundle == nil {
+            bundle = NSBundle(forClass: RatingView.self)
+        }
         
         if offImage == nil {
-            offImage = UIImage(named: "starBigOff", inBundle: bundle, compatibleWithTraitCollection: self.traitCollection)
+            offImage = UIImage(named: "starryStars_off", inBundle: bundle, compatibleWithTraitCollection: self.traitCollection)
         }
         if onImage == nil {
-            onImage = UIImage(named: "starBig", inBundle: bundle, compatibleWithTraitCollection: self.traitCollection)
+            onImage = UIImage(named: "starryStars_on", inBundle: bundle, compatibleWithTraitCollection: self.traitCollection)
         }
         if halfImage == nil {
-            halfImage = UIImage(named: "starBigHalf", inBundle: bundle, compatibleWithTraitCollection: self.traitCollection)
+            halfImage = UIImage(named: "starryStars_half", inBundle: bundle, compatibleWithTraitCollection: self.traitCollection)
         }
         
         guard let offImage = offImage else {
