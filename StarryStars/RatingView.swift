@@ -64,7 +64,10 @@ public class RatingView: UIView {
             halfImage = UIImage(named: "starBigHalf")!
         }
         
-        guard let offImage = offImage else { assert(false, "offImage is not set") }
+        guard let offImage = offImage else {
+            assert(false, "offImage is not set")
+            return
+        }
         
         for var i = 1; i <= starCount; i++ {
             let iv = UIImageView(image: offImage)
