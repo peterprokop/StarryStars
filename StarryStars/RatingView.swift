@@ -7,18 +7,18 @@
 
 import UIKit
 
-protocol RatingViewDelegate {
+public protocol RatingViewDelegate {
     func ratingView(ratingView: RatingView, didChangeRating newRating: Float)
 }
 
 @IBDesignable
 public class RatingView: UIView {
    
-    @IBInspectable var starCount: Int = 5
-    @IBInspectable var offImage: UIImage?
-    @IBInspectable var onImage: UIImage?
-    @IBInspectable var halfImage: UIImage?
-    @IBInspectable var rating: Float = Float(0) {
+    @IBInspectable public var starCount: Int = 5
+    @IBInspectable public var offImage: UIImage?
+    @IBInspectable public var onImage: UIImage?
+    @IBInspectable public var halfImage: UIImage?
+    @IBInspectable public var rating: Float = Float(0) {
         didSet {
             // Check if rating is valid
             rating = min(Float(starCount), rating)
@@ -26,9 +26,9 @@ public class RatingView: UIView {
             updateRating()
         }
     }
-    @IBInspectable var halfStarsAllowed: Bool = true
-    @IBInspectable var editable: Bool = true
-    @IBInspectable var delegate: RatingViewDelegate?
+    @IBInspectable public var halfStarsAllowed: Bool = true
+    @IBInspectable public var editable: Bool = true
+    @IBInspectable public var delegate: RatingViewDelegate?
     
     var stars = [UIImageView]()
     
