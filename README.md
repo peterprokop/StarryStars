@@ -9,7 +9,7 @@ You can change any of the following properties right in the interface builder:
 
 ![Properties](http://i.imgur.com/puU9Ypc.png)
 
-And the the result right away:
+And see the result right away:
 
 ![RatingView](http://i.imgur.com/r3bMqDT.png)
 
