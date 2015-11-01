@@ -25,9 +25,6 @@
                                     <constraint firstAttribute="height" constant="100" id="z8j-Ra-riY"/>
                                 </constraints>
                                 <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="offImage" value="starBigOff"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="onImage" value="starBig"/>
-                                    <userDefinedRuntimeAttribute type="image" keyPath="halfImage" value="starBigHalf"/>
                                     <userDefinedRuntimeAttribute type="number" keyPath="starCount">
                                         <integer key="value" value="7"/>
                                     </userDefinedRuntimeAttribute>
@@ -69,9 +66,4 @@
             <point key="canvasLocation" x="296" y="391"/>
         </scene>
     </scenes>
-    <resources>
-        <image name="starBig" width="35" height="35"/>
-        <image name="starBigHalf" width="35" height="35"/>
-        <image name="starBigOff" width="35" height="35"/>
-    </resources>
 </document>

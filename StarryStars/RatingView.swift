@@ -13,7 +13,7 @@ protocol RatingViewDelegate {
 
 @IBDesignable
 public class RatingView: UIView {
-
+   
     @IBInspectable var starCount: Int = 5
     @IBInspectable var offImage: UIImage?
     @IBInspectable var onImage: UIImage?
@@ -54,14 +54,16 @@ public class RatingView: UIView {
     }
     
     func customInit() {
+        let bundle = NSBundle(forClass: RatingView.self)
+        
         if offImage == nil {
-            offImage = UIImage(named: "starBigOff")!
+            offImage = UIImage(named: "starBigOff", inBundle: bundle, compatibleWithTraitCollection: self.traitCollection)
         }
         if onImage == nil {
-            onImage = UIImage(named: "starBig")!
+            onImage = UIImage(named: "starBig", inBundle: bundle, compatibleWithTraitCollection: self.traitCollection)
         }
         if halfImage == nil {
-            halfImage = UIImage(named: "starBigHalf")!
+            halfImage = UIImage(named: "starBigHalf", inBundle: bundle, compatibleWithTraitCollection: self.traitCollection)
         }
         
         guard let offImage = offImage else {
