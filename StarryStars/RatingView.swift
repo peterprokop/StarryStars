@@ -8,26 +8,51 @@
 import UIKit
 
 public protocol RatingViewDelegate {
+    /**
+     Called when user's touch ends
+     
+     - parameter ratingView: Rating view, which calls this method
+     - parameter didChangeRating newRating: New rating
+    */
     func ratingView(ratingView: RatingView, didChangeRating newRating: Float)
 }
 
+/**
+ Rating bar, fully customisable from Interface builder
+*/
 @IBDesignable
 public class RatingView: UIView {
    
+    /// Total number of stars
     @IBInspectable public var starCount: Int = 5
+    
+    /// Image of unlit star, if nil "starryStars_off" is used
     @IBInspectable public var offImage: UIImage?
+    
+    /// Image of fully lit star, if nil "starryStars_on" is used
     @IBInspectable public var onImage: UIImage?
+    
+    /// Image of half-lit star, if nil "starryStars_half" is used
     @IBInspectable public var halfImage: UIImage?
+    
+    /// Current rating, updates star images after setting
     @IBInspectable public var rating: Float = Float(0) {
         didSet {
-            // Check if rating is valid
+            // If rating is more than starCount simply set it to starCount
             rating = min(Float(starCount), rating)
             
             updateRating()
         }
     }
+    
+    /// If set to "false" only full stars will be lit
     @IBInspectable public var halfStarsAllowed: Bool = true
+    
+    /// If set to "false" user will not be able to edit the rating
     @IBInspectable public var editable: Bool = true
+    
+    
+    /// Delegate, must confrom to *RatingViewDelegate* protocol
     @IBInspectable public var delegate: RatingViewDelegate?
     
     var stars = [UIImageView]()
@@ -105,6 +130,9 @@ public class RatingView: UIView {
         }
     }
     
+    /**
+     Compute and adjust rating when user touches begin/move/end
+    */
     func handleTouches(touches: Set<UITouch>) {
         let touch = touches.first!
         let touchLocation = touch.locationInView(self)
@@ -126,6 +154,9 @@ public class RatingView: UIView {
         rating = 0
     }
 
+    /**
+     Adjust images on image views to represent new rating
+     */
     func updateRating() {
         // To avoid crash when using IB
         if stars.count == 0 {
