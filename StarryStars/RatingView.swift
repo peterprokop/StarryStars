@@ -7,7 +7,7 @@
 
 import UIKit
 
-public protocol RatingViewDelegate {
+@objc public protocol RatingViewDelegate {
     /**
      Called when user's touch ends
      
@@ -53,13 +53,15 @@ public class RatingView: UIView {
     
     
     /// Delegate, must confrom to *RatingViewDelegate* protocol
-    @IBInspectable public var delegate: RatingViewDelegate?
+    public weak var delegate: RatingViewDelegate?
     
     var stars = [UIImageView]()
     
     
     override init(frame: CGRect) {
         super.init(frame: frame)
+        
+        customInit()
     }
     
     required public init?(coder aDecoder: NSCoder) {
