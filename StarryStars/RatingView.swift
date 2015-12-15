@@ -14,7 +14,7 @@ import UIKit
      - parameter ratingView: Rating view, which calls this method
      - parameter didChangeRating newRating: New rating
     */
-    func ratingView(ratingView: RatingView, didChangeRating newRating: Float)
+    func ratingView(ratingView: RatingView, didChangeRating newRating: Double)
 }
 
 /**
@@ -36,10 +36,10 @@ public class RatingView: UIView {
     @IBInspectable public var halfImage: UIImage?
     
     /// Current rating, updates star images after setting
-    @IBInspectable public var rating: Float = Float(0) {
+    @IBInspectable public var rating: Double = Double(0) {
         didSet {
             // If rating is more than starCount simply set it to starCount
-            rating = min(Float(starCount), rating)
+            rating = min(Double(starCount), rating)
             
             updateRating()
         }
@@ -145,10 +145,10 @@ public class RatingView: UIView {
             let x = touchLocation.x;
             
             if x >= imageView.center.x {
-                rating = Float(i) + 1
+                rating = Double(i) + 1
                 return
             } else if x >= CGRectGetMinX(imageView.frame) && halfStarsAllowed {
-                rating = Float(i) + 0.5
+                rating = Double(i) + 0.5
                 return
             }
         }
@@ -177,7 +177,7 @@ public class RatingView: UIView {
         }
         
         // Now add a half star
-        if rating - Float(i) + 1 >= 0.5 {
+        if rating - Double(i) + 1 >= 0.5 {
             let star = stars[i-1]
             star.image = halfImage
             i++
