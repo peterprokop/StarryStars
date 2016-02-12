@@ -20,8 +20,8 @@ To add RatingView to your Storyboard/.xib file just drag a generic UIView from p
 ### Manual
 Just clone and add ```StarryStars``` directory to your project.
 
-### Cocoapods
-- Make sure that you use latest stable Cocoapods version: `pod --version`
+### CocoaPods
+- Make sure that you use latest stable CocoaPods version: `pod --version`
 - If not, update it: `sudo gem install cocoapods`
 - `pod init` in you project root dir
 - `nano Podfile`, add:
@@ -37,7 +37,7 @@ use_frameworks!
 
 ## Requirements
 
-- iOS 7.0+ (8.0+ if you use Cocoapods)
+- iOS 7.0+ (8.0+ if you use CocoaPods)
 - Xcode 7.0
 - Swift 2.0
 
