@@ -89,6 +89,7 @@ public class RatingView: UIView {
         if onImage == nil {
             onImage = UIImage(named: "starryStars_on", inBundle: bundle, compatibleWithTraitCollection: self.traitCollection)
         }
+        
         if halfImage == nil {
             halfImage = UIImage(named: "starryStars_half", inBundle: bundle, compatibleWithTraitCollection: self.traitCollection)
         }
@@ -98,11 +99,12 @@ public class RatingView: UIView {
             return
         }
         
-        for var i = 1; i <= starCount; i++ {
+        var i = 1
+        while i <= starCount {
             let iv = UIImageView(image: offImage)
             addSubview(iv)
             stars.append(iv)
-
+            i += 1
         }
         
         layoutStars()
@@ -127,7 +129,7 @@ public class RatingView: UIView {
                     
                     iv.center = CGPointMake(CGFloat(i) * distance + halfWidth * CGFloat(i - 1),
                         self.frame.size.height/2)
-                    i++
+                    i += 1
                 }
         }
     }
@@ -139,7 +141,8 @@ public class RatingView: UIView {
         let touch = touches.first!
         let touchLocation = touch.locationInView(self)
         
-        for var i = starCount - 1; i >= 0; i-- {
+        var i = starCount - 1
+        while i >= 0 {
             let imageView = stars[i]
             
             let x = touchLocation.x;
@@ -151,7 +154,9 @@ public class RatingView: UIView {
                 rating = Float(i) + 0.5
                 return
             }
+            i -= 1
         }
+        
         
         rating = 0
     }
@@ -167,9 +172,10 @@ public class RatingView: UIView {
         
         // Set every full star
         var i = 1
-        for ; i <= Int(rating); i++ {
+        while i <= Int(rating) {
             let star = stars[i-1]
             star.image = onImage
+            i += 1
         }
         
         if i > starCount {
@@ -180,13 +186,13 @@ public class RatingView: UIView {
         if rating - Float(i) + 1 >= 0.5 {
             let star = stars[i-1]
             star.image = halfImage
-            i++
+            i += 1
         }
         
-        
-        for ; i <= starCount; i++ {
+        while i <= starCount {
             let star = stars[i-1]
             star.image = offImage
+            i += 1
         }
     }
 }
