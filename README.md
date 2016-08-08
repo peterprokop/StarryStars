@@ -38,8 +38,8 @@ use_frameworks!
 ## Requirements
 
 - iOS 8.0+
-- Xcode 7.0
-- Swift 2.0
+- Xcode 7.3.1
+- Swift 2.2
 
 ## Other Projects
 
