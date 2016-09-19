@@ -128,6 +128,7 @@
 				TargetAttributes = {
 					0DEBD39A1BDA134D00FC7856 = {
 						CreatedOnToolsVersion = 7.0;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -290,6 +291,7 @@
 				PRODUCT_NAME = StarryStarsExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "StarryStarsExample/StarryStarsExample-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
 		};
@@ -303,6 +305,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = Prokop.StarryStarsExample;
 				PRODUCT_NAME = StarryStarsExample;
 				SWIFT_OBJC_BRIDGING_HEADER = "StarryStarsExample/StarryStarsExample-Bridging-Header.h";
+				SWIFT_VERSION = 3.0;
 			};
 			name = Release;
 		};
