@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name = 'StarryStars'
-  s.version = '0.0.6'
+  s.version = '1.0.0'
   s.license = 'MIT'
   s.summary = 'iOS GUI library for displaying and editing ratings'
   s.homepage = 'https://github.com/peterprokop/StarryStars'
