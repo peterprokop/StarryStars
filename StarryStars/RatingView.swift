@@ -14,29 +14,29 @@ import UIKit
      - parameter ratingView: Rating view, which calls this method
      - parameter didChangeRating newRating: New rating
     */
-    func ratingView(ratingView: RatingView, didChangeRating newRating: Float)
+    func ratingView(_ ratingView: RatingView, didChangeRating newRating: Float)
 }
 
 /**
  Rating bar, fully customisable from Interface builder
 */
 @IBDesignable
-public class RatingView: UIView {
+open class RatingView: UIView {
    
     /// Total number of stars
-    @IBInspectable public var starCount: Int = 5
+    @IBInspectable open var starCount: Int = 5
     
     /// Image of unlit star, if nil "starryStars_off" is used
-    @IBInspectable public var offImage: UIImage?
+    @IBInspectable open var offImage: UIImage?
     
     /// Image of fully lit star, if nil "starryStars_on" is used
-    @IBInspectable public var onImage: UIImage?
+    @IBInspectable open var onImage: UIImage?
     
     /// Image of half-lit star, if nil "starryStars_half" is used
-    @IBInspectable public var halfImage: UIImage?
+    @IBInspectable open var halfImage: UIImage?
     
     /// Current rating, updates star images after setting
-    @IBInspectable public var rating: Float = Float(0) {
+    @IBInspectable open var rating: Float = Float(0) {
         didSet {
             // If rating is more than starCount simply set it to starCount
             rating = min(Float(starCount), rating)
@@ -46,14 +46,14 @@ public class RatingView: UIView {
     }
     
     /// If set to "false" only full stars will be lit
-    @IBInspectable public var halfStarsAllowed: Bool = true
+    @IBInspectable open var halfStarsAllowed: Bool = true
     
     /// If set to "false" user will not be able to edit the rating
-    @IBInspectable public var editable: Bool = true
+    @IBInspectable open var editable: Bool = true
     
     
     /// Delegate, must confrom to *RatingViewDelegate* protocol
-    public weak var delegate: RatingViewDelegate?
+    open weak var delegate: RatingViewDelegate?
     
     var stars = [UIImageView]()
     
@@ -68,30 +68,30 @@ public class RatingView: UIView {
         super.init(coder: aDecoder)
     }
     
-    override public func awakeFromNib() {
+    override open func awakeFromNib() {
         super.awakeFromNib()
         
         customInit()
     }
     
-    override public func prepareForInterfaceBuilder() {
+    override open func prepareForInterfaceBuilder() {
         super.prepareForInterfaceBuilder()
         
         customInit()
     }
     
     func customInit() {
-        let bundle = NSBundle(forClass: RatingView.self)
+        let bundle = Bundle(for: RatingView.self)
 
         if offImage == nil {
-            offImage = UIImage(named: "starryStars_off", inBundle: bundle, compatibleWithTraitCollection: self.traitCollection)
+            offImage = UIImage(named: "starryStars_off", in: bundle, compatibleWith: self.traitCollection)
         }
         if onImage == nil {
-            onImage = UIImage(named: "starryStars_on", inBundle: bundle, compatibleWithTraitCollection: self.traitCollection)
+            onImage = UIImage(named: "starryStars_on", in: bundle, compatibleWith: self.traitCollection)
         }
         
         if halfImage == nil {
-            halfImage = UIImage(named: "starryStars_half", inBundle: bundle, compatibleWithTraitCollection: self.traitCollection)
+            halfImage = UIImage(named: "starryStars_half", in: bundle, compatibleWith: self.traitCollection)
         }
         
         guard let offImage = offImage else {
@@ -111,7 +111,7 @@ public class RatingView: UIView {
         updateRating()
     }
     
-    override public func layoutSubviews() {
+    override open func layoutSubviews() {
         super.layoutSubviews()
         
         layoutStars()
@@ -125,10 +125,10 @@ public class RatingView: UIView {
                 
                 var i = 1
                 for iv in stars {
-                    iv.frame = CGRectMake(0, 0, offImage.size.width, offImage.size.height)
+                    iv.frame = CGRect(x: 0, y: 0, width: offImage.size.width, height: offImage.size.height)
                     
-                    iv.center = CGPointMake(CGFloat(i) * distance + halfWidth * CGFloat(i - 1),
-                        self.frame.size.height/2)
+                    iv.center = CGPoint(x: CGFloat(i) * distance + halfWidth * CGFloat(i - 1),
+                        y: self.frame.size.height/2)
                     i += 1
                 }
         }
@@ -137,9 +137,9 @@ public class RatingView: UIView {
     /**
      Compute and adjust rating when user touches begin/move/end
     */
-    func handleTouches(touches: Set<UITouch>) {
+    func handleTouches(_ touches: Set<UITouch>) {
         let touch = touches.first!
-        let touchLocation = touch.locationInView(self)
+        let touchLocation = touch.location(in: self)
         
         var i = starCount - 1
         while i >= 0 {
@@ -150,7 +150,7 @@ public class RatingView: UIView {
             if x >= imageView.center.x {
                 rating = Float(i) + 1
                 return
-            } else if x >= CGRectGetMinX(imageView.frame) && halfStarsAllowed {
+            } else if x >= imageView.frame.minX && halfStarsAllowed {
                 rating = Float(i) + 0.5
                 return
             }
@@ -200,17 +200,17 @@ public class RatingView: UIView {
 // MARK: Override UIResponder methods
 
 extension RatingView {
-    override public func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override open func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard editable else { return }
         handleTouches(touches)
     }
     
-    override public func touchesMoved(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override open func touchesMoved(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard editable else { return }
         handleTouches(touches)
     }
     
-    override public func touchesEnded(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    override open func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
         guard editable else { return }
         handleTouches(touches)
         guard let delegate = delegate else { return }
