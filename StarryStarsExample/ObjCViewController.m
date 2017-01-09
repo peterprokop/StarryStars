@@ -8,6 +8,7 @@
 
 #import "ObjCViewController.h"
 #import "StarryStarsExample-Swift.h"
+#import <StarryStars/StarryStars-Swift.h>
 
 @interface ObjCViewController()<RatingViewDelegate>
 
@@ -19,7 +20,9 @@
     [super viewDidLoad];
     
     
-    RatingView* rv = [[RatingView alloc] initWithFrame:self.view.bounds];
+    RatingView* rv = [[RatingView alloc] init];
+    rv.frame = self.view.bounds;
+
     [self.view addSubview:rv];
     rv.editable = YES;
     rv.delegate = self;

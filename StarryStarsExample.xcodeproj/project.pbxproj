@@ -12,11 +12,38 @@
 		0D2DE7151BE5F23E005DBFEC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2DE70B1BE5F23E005DBFEC /* LaunchScreen.storyboard */; };
 		0D2DE7161BE5F23E005DBFEC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0D2DE70D1BE5F23E005DBFEC /* Main.storyboard */; };
 		0D2DE7191BE5F23E005DBFEC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DE7121BE5F23E005DBFEC /* ViewController.swift */; };
-		0D2DE7201BE5F83C005DBFEC /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DE71E1BE5F83C005DBFEC /* RatingView.swift */; };
-		0D98B9B81BE60BDB00D89929 /* starryStars_half@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D98B9B51BE60BDB00D89929 /* starryStars_half@2x.png */; };
-		0D98B9B91BE60BDB00D89929 /* starryStars_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D98B9B61BE60BDB00D89929 /* starryStars_off@2x.png */; };
-		0D98B9BA1BE60BDB00D89929 /* starryStars_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D98B9B71BE60BDB00D89929 /* starryStars_on@2x.png */; };
+		0D39D5CB1E23CD0F0014489F /* StarryStars.h in Headers */ = {isa = PBXBuildFile; fileRef = 0D39D5C91E23CD0F0014489F /* StarryStars.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0D39D5CE1E23CD0F0014489F /* StarryStars.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0D39D5C71E23CD0F0014489F /* StarryStars.framework */; };
+		0D39D5CF1E23CD0F0014489F /* StarryStars.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 0D39D5C71E23CD0F0014489F /* StarryStars.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		0D39D5D41E23CD3E0014489F /* RatingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D2DE71E1BE5F83C005DBFEC /* RatingView.swift */; };
+		0D39D5D51E23CD450014489F /* starryStars_half@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D98B9B51BE60BDB00D89929 /* starryStars_half@2x.png */; };
+		0D39D5D61E23CD480014489F /* starryStars_off@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D98B9B61BE60BDB00D89929 /* starryStars_off@2x.png */; };
+		0D39D5D71E23CD4B0014489F /* starryStars_on@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 0D98B9B71BE60BDB00D89929 /* starryStars_on@2x.png */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		0D39D5CC1E23CD0F0014489F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0DEBD3931BDA134D00FC7856 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0D39D5C61E23CD0F0014489F;
+			remoteInfo = StarryStars;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		0D39D5D31E23CD0F0014489F /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				0D39D5CF1E23CD0F0014489F /* StarryStars.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		0D04DE6C1C07006F00EBDC42 /* StarryStarsExample-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "StarryStarsExample-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -28,6 +55,9 @@
 		0D2DE70F1BE5F23E005DBFEC /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D2DE7121BE5F23E005DBFEC /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0D2DE71E1BE5F83C005DBFEC /* RatingView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RatingView.swift; sourceTree = "<group>"; };
+		0D39D5C71E23CD0F0014489F /* StarryStars.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StarryStars.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		0D39D5C91E23CD0F0014489F /* StarryStars.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StarryStars.h; sourceTree = "<group>"; };
+		0D39D5CA1E23CD0F0014489F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0D98B9B51BE60BDB00D89929 /* starryStars_half@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "starryStars_half@2x.png"; sourceTree = "<group>"; };
 		0D98B9B61BE60BDB00D89929 /* starryStars_off@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "starryStars_off@2x.png"; sourceTree = "<group>"; };
 		0D98B9B71BE60BDB00D89929 /* starryStars_on@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "starryStars_on@2x.png"; sourceTree = "<group>"; };
@@ -35,10 +65,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0D39D5C31E23CD0F0014489F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DEBD3981BDA134D00FC7856 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0D39D5CE1E23CD0F0014489F /* StarryStars.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +101,8 @@
 		0D2DE71C1BE5F83C005DBFEC /* StarryStars */ = {
 			isa = PBXGroup;
 			children = (
+				0D39D5C91E23CD0F0014489F /* StarryStars.h */,
+				0D39D5CA1E23CD0F0014489F /* Info.plist */,
 				0D98B9B41BE60BDB00D89929 /* Resource */,
 				0D2DE71E1BE5F83C005DBFEC /* RatingView.swift */,
 			);
@@ -92,13 +132,43 @@
 			isa = PBXGroup;
 			children = (
 				0DEBD39B1BDA134D00FC7856 /* StarryStarsExample.app */,
+				0D39D5C71E23CD0F0014489F /* StarryStars.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		0D39D5C41E23CD0F0014489F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D39D5CB1E23CD0F0014489F /* StarryStars.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		0D39D5C61E23CD0F0014489F /* StarryStars */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0D39D5D21E23CD0F0014489F /* Build configuration list for PBXNativeTarget "StarryStars" */;
+			buildPhases = (
+				0D39D5C21E23CD0F0014489F /* Sources */,
+				0D39D5C31E23CD0F0014489F /* Frameworks */,
+				0D39D5C41E23CD0F0014489F /* Headers */,
+				0D39D5C51E23CD0F0014489F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = StarryStars;
+			productName = StarryStars;
+			productReference = 0D39D5C71E23CD0F0014489F /* StarryStars.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		0DEBD39A1BDA134D00FC7856 /* StarryStarsExample */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0DEBD3AD1BDA134D00FC7856 /* Build configuration list for PBXNativeTarget "StarryStarsExample" */;
@@ -106,10 +176,12 @@
 				0DEBD3971BDA134D00FC7856 /* Sources */,
 				0DEBD3981BDA134D00FC7856 /* Frameworks */,
 				0DEBD3991BDA134D00FC7856 /* Resources */,
+				0D39D5D31E23CD0F0014489F /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				0D39D5CD1E23CD0F0014489F /* PBXTargetDependency */,
 			);
 			name = StarryStarsExample;
 			productName = RateyRateExample;
@@ -126,6 +198,10 @@
 				LastUpgradeCheck = 0820;
 				ORGANIZATIONNAME = "Peter Prokop";
 				TargetAttributes = {
+					0D39D5C61E23CD0F0014489F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
 					0DEBD39A1BDA134D00FC7856 = {
 						CreatedOnToolsVersion = 7.0;
 						LastSwiftMigration = 0800;
@@ -146,38 +222,61 @@
 			projectRoot = "";
 			targets = (
 				0DEBD39A1BDA134D00FC7856 /* StarryStarsExample */,
+				0D39D5C61E23CD0F0014489F /* StarryStars */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0D39D5C51E23CD0F0014489F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D39D5D51E23CD450014489F /* starryStars_half@2x.png in Resources */,
+				0D39D5D61E23CD480014489F /* starryStars_off@2x.png in Resources */,
+				0D39D5D71E23CD4B0014489F /* starryStars_on@2x.png in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DEBD3991BDA134D00FC7856 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0D98B9B81BE60BDB00D89929 /* starryStars_half@2x.png in Resources */,
 				0D2DE7161BE5F23E005DBFEC /* Main.storyboard in Resources */,
-				0D98B9BA1BE60BDB00D89929 /* starryStars_on@2x.png in Resources */,
 				0D2DE7151BE5F23E005DBFEC /* LaunchScreen.storyboard in Resources */,
-				0D98B9B91BE60BDB00D89929 /* starryStars_off@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0D39D5C21E23CD0F0014489F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0D39D5D41E23CD3E0014489F /* RatingView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		0DEBD3971BDA134D00FC7856 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 				0D04DE721C07009700EBDC42 /* ObjCViewController.m in Sources */,
-				0D2DE7201BE5F83C005DBFEC /* RatingView.swift in Sources */,
 				0D2DE7191BE5F23E005DBFEC /* ViewController.swift in Sources */,
 				0D2DE7131BE5F23E005DBFEC /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		0D39D5CD1E23CD0F0014489F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0D39D5C61E23CD0F0014489F /* StarryStars */;
+			targetProxy = 0D39D5CC1E23CD0F0014489F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		0D2DE70B1BE5F23E005DBFEC /* LaunchScreen.storyboard */ = {
@@ -199,6 +298,57 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		0D39D5D01E23CD0F0014489F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = StarryStars/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Prokop.StarryStars;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		0D39D5D11E23CD0F0014489F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = StarryStars/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Prokop.StarryStars;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		0DEBD3AB1BDA134D00FC7856 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -288,6 +438,7 @@
 		0DEBD3AE1BDA134D00FC7856 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = StarryStarsExample/Info.plist;
@@ -303,6 +454,7 @@
 		0DEBD3AF1BDA134D00FC7856 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = StarryStarsExample/Info.plist;
@@ -317,6 +469,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		0D39D5D21E23CD0F0014489F /* Build configuration list for PBXNativeTarget "StarryStars" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0D39D5D01E23CD0F0014489F /* Debug */,
+				0D39D5D11E23CD0F0014489F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		0DEBD3961BDA134D00FC7856 /* Build configuration list for PBXProject "StarryStarsExample" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
