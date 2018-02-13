@@ -121,13 +121,13 @@ open class RatingView: UIView {
         if stars.count != 0,
             let offImage = stars.first?.image {
                 let halfWidth = offImage.size.width/2
-                let distance = (bounds.size.width - (offImage.size.width * CGFloat(starCount))) / CGFloat(starCount + 1) + halfWidth
+                let distance = (bounds.size.width - (offImage.size.width * CGFloat(starCount))) / CGFloat(starCount - 1) + halfWidth
                 
                 var i = 1
                 for iv in stars {
                     iv.frame = CGRect(x: 0, y: 0, width: offImage.size.width, height: offImage.size.height)
                     
-                    iv.center = CGPoint(x: CGFloat(i) * distance + halfWidth * CGFloat(i - 1),
+                    iv.center = CGPoint(x: CGFloat(i - 1) * distance + halfWidth * CGFloat(i),
                         y: self.frame.size.height/2)
                     i += 1
                 }
