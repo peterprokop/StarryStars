@@ -17,6 +17,17 @@ To add RatingView to your Storyboard/.xib file just drag a generic UIView from p
 
 ## Installation
 
+### Carthage
+- `cd` to your project folder
+- `touch Cartfile` (if you don't have one yet)
+- `nano Cartfile`
+- put `github "peterprokop/StarryStars" == 2.0.0` into Cartfile
+- Save it: `ctrl-x, y, enter`
+- Run `carthage update`
+- Copy framework from `Carthage/Build/iOS` to your project
+- Make sure that framework is added in Embedded Binaries section of your target (or else you will get dyld library not loaded referenced from ... reason image not found error)
+- Add  `import StarryStars` on top of your view controller's code
+
 ### Manual
 Just clone and add ```StarryStars``` directory to your project.
 
@@ -27,7 +38,7 @@ Just clone and add ```StarryStars``` directory to your project.
 - `nano Podfile`, add:
 
 ```
-pod 'StarryStars', '~> 0.0.1'
+pod 'StarryStars', '~> 2.0.0'
 use_frameworks! 
 ``` 
 - Save it: `ctrl-x`, `y`, `enter`
@@ -37,9 +48,39 @@ use_frameworks!
 
 ## Requirements
 
-- iOS 8.0+
-- Xcode 8.0+
-- Swift 3.0 (for older versions, see `swift-2.2` branch)
+- iOS 10.0+
+- Xcode 10.0+
+- Swift 5.0 (for older versions, see `swift-2.2` branch)
+
+## Usage from code
+
+Swift:
+```
+let rvRightToLeft = RatingView()
+
+rvRightToLeft.frame = view.bounds
+
+view.addSubview(rvRightToLeft)
+rvRightToLeft.editable = true
+rvRightToLeft.delegate = self
+
+// RatingView will respect setting this property
+rvRightToLeft.semanticContentAttribute = UISemanticContentAttributeForceRightToLeft;
+```
+
+Objective C:
+```
+RatingView* rvRightToLeft = [[RatingView alloc] init];
+
+rvRightToLeft.frame = self.view.bounds;
+
+[self.view addSubview:rvRightToLeft];
+rvRightToLeft.editable = YES;
+rvRightToLeft.delegate = self;
+
+// RatingView will respect setting this property
+rvRightToLeft.semanticContentAttribute = UISemanticContentAttributeForceRightToLeft;
+```
 
 ## Other Projects
 

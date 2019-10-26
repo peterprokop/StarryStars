@@ -19,13 +19,33 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    
     RatingView* rv = [[RatingView alloc] init];
-    rv.frame = self.view.bounds;
+    rv.frame = CGRectMake(
+                          self.view.bounds.origin.x,
+                          self.view.bounds.origin.y,
+                          self.view.bounds.size.width,
+                          self.view.bounds.size.height/2
+                          );
 
     [self.view addSubview:rv];
     rv.editable = YES;
     rv.delegate = self;
+
+    RatingView* rvRightToLeft = [[RatingView alloc] init];
+
+    rvRightToLeft.frame = CGRectMake(
+                          self.view.bounds.origin.x,
+                          self.view.bounds.origin.y + self.view.bounds.size.height/2,
+                          self.view.bounds.size.width,
+                          self.view.bounds.size.height/2
+                          );
+
+    [self.view addSubview:rvRightToLeft];
+    rvRightToLeft.editable = YES;
+    rvRightToLeft.delegate = self;
+
+    // RatingView will respect setting this property
+    rvRightToLeft.semanticContentAttribute = UISemanticContentAttributeForceRightToLeft;
 }
 
 - (void)didReceiveMemoryWarning {
@@ -33,7 +53,7 @@
 }
 
 - (void)ratingView:(RatingView * __nonnull)ratingView didChangeRating:(float)newRating {
-    NSLog(@"newRating: %f", newRating);
+    NSLog(@"ratingView %@ didChangeRating: %.1f", ratingView, newRating);
 }
 
 

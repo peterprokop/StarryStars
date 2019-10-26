@@ -36,7 +36,7 @@ open class RatingView: UIView {
     @IBInspectable open var halfImage: UIImage?
     
     /// Current rating, updates star images after setting
-    @IBInspectable open var rating: Float = Float(0) {
+    @IBInspectable open var rating: Float = 0 {
         didSet {
             // If rating is more than starCount simply set it to starCount
             rating = min(Float(starCount), rating)
@@ -50,14 +50,23 @@ open class RatingView: UIView {
     
     /// If set to "false" user will not be able to edit the rating
     @IBInspectable open var editable: Bool = true
-    
-    
+
     /// Delegate, must confrom to *RatingViewDelegate* protocol
-    open weak var delegate: RatingViewDelegate?
+    @objc open weak var delegate: RatingViewDelegate?
     
-    var stars = [UIImageView]()
-    
-    
+    var stars: [UIImageView] = []
+
+    override open var semanticContentAttribute: UISemanticContentAttribute {
+        didSet {
+            updateTransform()
+        }
+    }
+
+    private var shouldUseRightToLeft: Bool {
+        return UIView.userInterfaceLayoutDirection(for: semanticContentAttribute)
+            == .rightToLeft
+    }
+
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -109,6 +118,8 @@ open class RatingView: UIView {
         
         layoutStars()
         updateRating()
+
+        updateTransform()
     }
     
     override open func layoutSubviews() {
@@ -116,21 +127,28 @@ open class RatingView: UIView {
         
         layoutStars()
     }
+
+    private func updateTransform() {
+        transform = shouldUseRightToLeft
+            ? CGAffineTransform.init(scaleX: -1, y: 1)
+            : .identity
+    }
     
-    func layoutStars() {
-        if stars.count != 0,
-            let offImage = stars.first?.image {
-                let halfWidth = offImage.size.width/2
-                let distance = (bounds.size.width - (offImage.size.width * CGFloat(starCount))) / CGFloat(starCount + 1) + halfWidth
-                
-                var i = 1
-                for iv in stars {
-                    iv.frame = CGRect(x: 0, y: 0, width: offImage.size.width, height: offImage.size.height)
-                    
-                    iv.center = CGPoint(x: CGFloat(i) * distance + halfWidth * CGFloat(i - 1),
-                        y: self.frame.size.height/2)
-                    i += 1
-                }
+    private func layoutStars() {
+        guard !stars.isEmpty, let offImage = stars.first?.image else {
+            return
+        }
+
+        let halfWidth = offImage.size.width/2
+        let distance = (bounds.size.width - (offImage.size.width * CGFloat(starCount))) / CGFloat(starCount + 1) + halfWidth
+
+        for (index, iv) in stars.enumerated() {
+            iv.frame = CGRect(x: 0, y: 0, width: offImage.size.width, height: offImage.size.height)
+
+            iv.center = CGPoint(
+                x: CGFloat(index + 1) * distance + halfWidth * CGFloat(index),
+                y: self.frame.size.height/2
+            )
         }
     }
     
@@ -140,7 +158,7 @@ open class RatingView: UIView {
     func handleTouches(_ touches: Set<UITouch>) {
         let touch = touches.first!
         let touchLocation = touch.location(in: self)
-        
+
         var i = starCount - 1
         while i >= 0 {
             let imageView = stars[i]
@@ -166,7 +184,7 @@ open class RatingView: UIView {
      */
     func updateRating() {
         // To avoid crash when using IB
-        if stars.count == 0 {
+        guard !stars.isEmpty else {
             return
         }
         
@@ -215,5 +233,13 @@ extension RatingView {
         handleTouches(touches)
         guard let delegate = delegate else { return }
         delegate.ratingView(self, didChangeRating: rating)
+    }
+}
+
+@objc extension RatingView {
+    @objc public enum FillDirection: Int {
+        case automatic
+        case leftToRight
+        case rightToLeft
     }
 }

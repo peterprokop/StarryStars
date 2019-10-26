@@ -6,19 +6,31 @@
 //
 
 import UIKit
+import StarryStars
 
 class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        let rvRightToLeft = RatingView()
+
+        rvRightToLeft.frame = view.bounds
+
+        view.addSubview(rvRightToLeft)
+        rvRightToLeft.editable = true
+        rvRightToLeft.delegate = self
+
+        // RatingView will respect setting this property
+        rvRightToLeft.semanticContentAttribute = .forceRightToLeft
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
+}
 
+extension ViewController: RatingViewDelegate {
+    func ratingView(_ ratingView: RatingView, didChangeRating newRating: Float) {
+        print("ratingView \(ratingView) didChangeRating \(newRating)")
+    }
 
 }
 
