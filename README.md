@@ -65,7 +65,7 @@ rvRightToLeft.editable = true
 rvRightToLeft.delegate = self
 
 // RatingView will respect setting this property
-rvRightToLeft.semanticContentAttribute = UISemanticContentAttributeForceRightToLeft;
+rvRightToLeft.semanticContentAttribute = .forceRightToLeft
 ```
 
 Objective C:
